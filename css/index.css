@@ -145,7 +145,10 @@
        line-height: 40px;
        font-size: 30px;
           } 
-About.active, project.active, experience.active, connect.active {
+    About.active, 
+    project.active, 
+    experience.active, 
+    connect.active {
     position: relative;
     opacity: 1;
     z-index: 8;
@@ -225,6 +228,7 @@ About.active, project.active, experience.active, connect.active {
     .Gd-button:hover{
     background-color: rgba(233, 10, 203, 0.075);
     }
+    /* It will store the messages*/
     #messages{
         height: 30vh;
     padding:1px 5px;
