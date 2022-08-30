@@ -152,7 +152,7 @@
     position: relative;
     opacity: 1;
     z-index: 8;
-}
+    }
 
       .h1-section{
          text-decoration:underline;
@@ -173,7 +173,35 @@
    border-radius: 20px;
    background: rgb(63,94,251);
    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(248,252,70,0.4939017843465511) 100%);
-   }     
+   }   
+    /* Project*/
+    svg {
+      vertical-align: middle;
+    }
+    a {
+      text-decoration: yellow ;
+      color:azure;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .box {
+      border: 10px double rgb(209, 233, 27);
+      padding: 5px;
+      margin: 5px; 
+      
+    }
+    ol {
+      margin: 0px;
+      padding: 0px;
+      list-style-type: none; 
+    }
+    .h2-project{
+      text-decoration:underline;
+       text-shadow:2px 1px yellow;
+       padding: 15px;
+     }
+    /*Form*/
    .h2-message {
     text-decoration:underline;
           text-shadow:2px 1px yellow;
