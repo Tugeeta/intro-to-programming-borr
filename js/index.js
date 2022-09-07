@@ -53,9 +53,37 @@ copyrightFooter.innerHTML = `&copy; Geeta Turumella ${thisYear}`
        removeButton.type = 'button';
        removeButton.classList.add('button');
        newMessage.appendChild(removeButton);
-   });
+   
    //To remove the entry: This not working
      removeButton.addEventListener('click', (event) => {
        const entry = event.target.parentNode;
        entry.remove();
      });
+    });
+
+    const githubRequest = new XMLHttpRequest();
+   githubRequest.open('GET','https://api.github.com/users/Tugeeta/repos'); 
+     githubRequest.send();
+      
+   githubRequest.addEventListener('load',function(){
+       let repositories = JSON.parse(this.response);
+       console.log(repositories);
+      
+ 
+   const projectSection = document.querySelector('#projects');
+     let projectList = projectSection.querySelector('ul');
+       let project = document.createElement('li');
+       //showing uncaught type error as I placed 
+       //script file in head section of html because to diplay git repositories 
+       projectList.appendChild(project);
+       for(let i = 0; i < repositories.lenght; i++){
+       projectList.innerHTML = `<a class="list-repo" href=
+       "${repositories[i].html_url}">${repositories[i].name}</a>`
+   
+       }
+   });
+     gitpin("https://api.github.com/repos/Tugeeta/Reponame", "Tugeeta", document.getElementById("ElementId"));  
+   listrepos("Tugeeta", document.getElementById("ElementId")).then(reposcount => {
+  //In this section, variable reposcount stores the total number of Repositories.
+    });
+``
