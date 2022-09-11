@@ -1,6 +1,3 @@
-
-//SELECTING FOOTER AND PARAGRAPH ELEMENT USING DOM
-
 const today = new Date();
 const thisYear = today.getFullYear();
 
@@ -61,29 +58,37 @@ copyrightFooter.innerHTML = `&copy; Geeta Turumella ${thisYear}`
      });
     });
 
-    const githubRequest = new XMLHttpRequest();
-   githubRequest.open('GET','https://api.github.com/users/Tugeeta/repos'); 
-     githubRequest.send();
+      //To Get Github Repositories Using Fetch Method
+    fetch('https://api.github.com/users/Tugeeta/repos')
+      .then((response) => response.json())
+      .then((data) => {
+      console.log(data)
+      })
       
-   githubRequest.addEventListener('load',function(){
-       let repositories = JSON.parse(this.response);
-       console.log(repositories);
+      .catch((error) => {
+       console.log('error is', error);
+      })
+
+       document.addEventListener('load',function(){
+        const repositories = JSON.parse(this.response);
+        console.log(repositories);
       
  
    const projectSection = document.querySelector('#projects');
-     let projectList = projectSection.querySelector('ul');
-       let project = document.createElement('li');
-       //showing uncaught type error as I placed 
-       //script file in head section of html because to diplay git repositories 
+     const projectList = projectSection.querySelector('ol');
+       const project = document.createElement('li');
+       
        projectList.appendChild(project);
        for(let i = 0; i < repositories.lenght; i++){
        projectList.innerHTML = `<a class="list-repo" href=
        "${repositories[i].html_url}">${repositories[i].name}</a>`
    
        }
-   });
-     gitpin("https://api.github.com/repos/Tugeeta/Reponame", "Tugeeta", document.getElementById("ElementId"));  
+      })
+      
+     //gitpin("https://api.github.com/repos/Tugeeta/Reponame", "Tugeeta", document.getElementById("ElementId"));  
    listrepos("Tugeeta", document.getElementById("ElementId")).then(reposcount => {
-  //In this section, variable reposcount stores the total number of Repositories.
-    });
-``
+    console.log(reposcount);
+   });   
+
+
