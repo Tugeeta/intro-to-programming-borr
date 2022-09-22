@@ -12,51 +12,56 @@
   <script src="https://gitlist.himdek.com/GitHubList.js"></script>
   </head>
   <body>
-  <nav class="navbar">
+  <nav id="navbar" role ="navigation">
      <!-- LOGO -->
      <div class="logo"><img src ="GDlogo.png" alt="Geeta Turumella" width=35px></div>
      <!-- NAVIGATION MENU -->
-     <ul class="nav-links">
+     
+     <ul id="menu"></ul>
        <!-- USING CHECKBOX -->
-       <input type="checkbox" id="checkbox_toggle" />
-       <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+       <input type="checkbox" id="checkbox_toggle"/>
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
        <!-- NAVIGATION MENUS -->
-       <div class="menu">
+       <div id="menuToggle">    
   <li class="link-li"><a href="#about">About</a></li>
   <li class="link-li"><a href="#experience">Experience</a></li>
   <li class="link-li"><a href="#skills">Skills</a></li>
   <li class="link-li"><a href="#projects">Project</a></li>
   <li class="link-li"><a href="#message">Leave-a-Message</a></li>  
   <li class="link-li"><a href="#connect">Connect</a></li>
-  </div>
+  
   </ul>
+</div>
   </nav>
 
   <!-- ABOUT SECTION-->	
-          <section class="about-section active">
-          <h2 class="hero-heading">hello! i am<br> geeta</h2>
+          <section class= "about-section" id="about">
+              <h2 class="hero-heading">hello! i am<br> geeta</h2>
 		  <img src="geeta.png" class="about-img" alt=" ">
-	      <div class="about-info" id="about">
-
-		  		  <p>Thanks for checking out my profile! <br>I am re-entering the workforce after 12 years.
-              I have a Master's degree and Diploma in Advanced Computer Technology.
-				  I am a person with versatile skillset, integrity and willingness to learn new skills. 
-              I am curious, driven, <br> and always looking to improve my abilities. I am looking for entry level Front End Web Developer returnship jobs or junior level jobs.
-              I am confident in my ability <br> to successfully succeed in any task that I take up. </p>
+    
+    <div class="about-info"> 
+      <p>
+		  	  Thanks for checking out my profile! <br>I am re-entering the workforce after 12 years.
+              I have a Master's degree. I am a person with versatile skillset, integrity and willingness
+              to learn new skills. I am curious, driven, and always looking to improve my abilities.
+              
+               I am looking for entry level Front End Web Developer returnship jobs or junior level jobs.
+              I am confident in my ability to successfully succeed in any task that I take up. 
+            </p>
         </div>
 	             </section>
    
   
 		<!--EXPERIENCE SECTION-->
-        <section class ="experience-section"> 
-		  <div id="experience"></div>
+        <section id ="experience"> 
+		  <div></div>
           <h1 class="h1-section"> Experience </h1>
            <ul>
             <li>2010-2022: 
                 
-               <p>I have been out of work for the past 12 years as I was taking care of home and my son.  
+               <p>  
                I did some volunteering work in my son’s school as well as chaperoned the field trips
-                before the pandemic.   Developed a personal portfolio project using <strong><em> HTML5, CSS3, javaScript</em></strong> and some Odin projects(June-September-2022).  
+                before the pandemic.Developed a personal portfolio project using <strong><em> HTML5, CSS3, javaScript</em></strong> and some Odin projects(June-September-2022).  
                 Doing <strong><em> UX design</em></strong> course from Coursera. </p><br><br>
            </li>
         
@@ -108,7 +113,7 @@
     </div>
     </section>
 
-    <!--Messages submitted-->
+    <!--MESSAGE SUBMISSION FORM-->
     <section id="messages">
        <div>
        <h2 class="h2-message">Messages</h2>
@@ -118,15 +123,15 @@
 
     <!--CONNECT SECTION-->
     <section id = "connect">
- <h1 class="h1-section">Connect</hi>
-  <h3> <a href ="mailto:gtturumella@gmail.com"> Email &nbsp; </a>
-  <a href="https://github.com/Tugeeta">GitHub<img src="github.jpg" width="25"> &nbsp; &nbsp;</a>
-  <a href="https://www.linkedin.com/in/geeta-devi-404679238/">Linkedin<img src="linkedin.jpg" width="25"></a>
- </h3>
- <footer class="footer-copyright">
-  <p id="copyright"></p>
-  </footer>      
-  <script src="js/index.js"></script>
- </section>
+      <h1 class="h1-section">Connect</hi>
+       <h3> <a href ="mailto:gtturumella@gmail.com">Email </a>&nbsp;
+         <a href="https://github.com/Tugeeta">GitHub<img src="github.jpg" width="25"> </a>
+       &nbsp;<a href="https://www.linkedin.com/in/geeta-devi-404679238/">Linkedin <img src="linkedin.jpg" width="25"></a>
+      </h3>
+      <footer class="footer-copyright">
+       <p id="copyright"></p>
+       </footer>      
+       <script src="js/index.js"></script>
+      </section>
   </body>
 </html>

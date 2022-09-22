@@ -51,7 +51,7 @@ copyrightFooter.innerHTML = `&copy; Geeta Turumella ${thisYear}`
        removeButton.classList.add('button');
        newMessage.appendChild(removeButton);
    
-   //To remove the entry: This not working
+   //To remove the entry:
      removeButton.addEventListener('click', (event) => {
        const entry = event.target.parentNode;
        entry.remove();
@@ -70,7 +70,7 @@ copyrightFooter.innerHTML = `&copy; Geeta Turumella ${thisYear}`
       })
 
        document.addEventListener('load',function(){
-        const repositories = JSON.parse(this.response);
+       const repositories = JSON.parse(this.response);
         console.log(repositories);
       
  
@@ -79,6 +79,7 @@ copyrightFooter.innerHTML = `&copy; Geeta Turumella ${thisYear}`
        const project = document.createElement('li');
        
        projectList.appendChild(project);
+       
        for(let i = 0; i < repositories.lenght; i++){
        projectList.innerHTML = `<a class="list-repo" href=
        "${repositories[i].html_url}">${repositories[i].name}</a>`
